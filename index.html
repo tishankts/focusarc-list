@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusArc Product Catalog</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/focusarc-product-catalog/style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>FocusArc Product Catalog</h1>
+    <p>Electronics • Gadgets • Accessories</p>
+    <div class="admin-controls">
+      <button id="adminLoginBtn">Admin Login</button>
+      <button id="adminLogoutBtn" style="display:none;">Logout</button>
+    </div>
+  </header>
+
+  <!-- Search Bar -->
+  <section class="search-container">
+    <input type="text" id="searchBox" placeholder="🔍 Search for a product..." onkeyup="searchProducts()" />
+  </section>
+
+  <!-- Catalog -->
+  <main>
+    <div class="catalog" id="catalog"></div>
+  </main>
+
+  <!-- Admin Add Product Form -->
+  <section class="add-form" id="adminSection" style="display:none;">
+    <h2>Add New Product</h2>
+    <form id="addProductForm">
+      <input type="text" id="pname" placeholder="Product Name" required><br>
+      <input type="number" id="pprice" placeholder="Price (LKR)" required><br>
+      <input type="file" id="pimage" accept="image/*" required><br><br>
+      <button type="submit">Add Product</button>
+    </form>
+  </section>
+
+  <footer>© 2025 <strong>FocusArc</strong> | All Rights Reserved</footer>
+
+  <script src="/focusarc-product-catalog/script.js"></script>
+</body>
+</html>
